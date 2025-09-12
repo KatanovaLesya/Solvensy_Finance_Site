@@ -188,10 +188,13 @@ h2::after {
 
 .video-caption a{
     text-decoration: none;
-    color: #ffffff;
-    letter-spacing: 0.2em;
     font-style: normal;
-    font-weight: 200;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 3rem;
+    color: #ffffff;
     
 }
 
