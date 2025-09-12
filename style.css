@@ -1,0 +1,481 @@
+body {
+    margin: 0;
+    font-family: "Arial", serif;
+}
+
+/* --- Header --- */
+header {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 1.6rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #949494;
+}
+
+.phone a {
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-style: normal;
+    color: #ffffff;
+
+}
+
+.phone a:hover {
+    color: #949494;
+}
+
+/* --- Hero --- */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('./images/hero.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    height: 120px;
+    width: auto;
+    margin-bottom: 0.1rem;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 6.5rem;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.1;
+}
+
+h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 3rem;
+    margin: 0;
+    color: #ffffff;
+    padding-bottom: 10rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ff6600;
+    margin: 1rem 0 0;
+
+}
+
+.hero h1 {
+    line-height: 1.5;
+    font-size: 7rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-style: normal;
+    color: #ffffff;
+    margin: 0;
+}
+
+.about-us {
+    background-color: black;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.video-section {
+    background: black;
+    color: white;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+}
+
+.video-caption {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-style: normal;
+    color: #ffffff;
+    text-align: left;
+    margin-top: 4rem;
+}
+
+.video-caption h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.video-caption p {
+    font-size: 0.6rem;
+    color: #7a7a7a;
+    margin: 0;
+}
+
+.video-caption a{
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 0.2em;
+    font-style: normal;
+    font-weight: 200;
+    
+}
+
+.video-caption a:hover {
+    color: #ff6600;
+}
+
+.video-button{
+    margin-top: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+
+}
+
+.services-section {
+    background: black;
+    color: white;
+    padding-bottom: 10rem;
+}
+
+.services-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.services-section h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 3rem;
+    margin: 0;
+    color: #ffffff;
+    padding-bottom: 10rem;
+}
+
+.services-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ff6600;
+    margin: 1rem 0 0;
+
+}
+
+.services-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service-item {
+    flex: 1 1 200px;
+    /* адаптивна ширина */
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service-item svg {
+    margin-bottom: 0.5rem;
+    fill: white;
+    transition: fill 0.3s;
+}
+
+.service-item:hover svg {
+    fill: #ff6600;
+
+}
+
+#data path {
+    fill: white !important;
+    transition: fill 0.3s;
+}
+
+.service-item:hover #data path {
+    fill: #ff6600 !important;
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.arrow-item {
+    flex: 0 0 auto;
+    /* стрілка займає тільки свій розмір */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
+.arrow-icon {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    opacity: 0.3;
+    animation: arrowFlow 1.5s infinite ease-in-out;
+}
+
+/* ключові кадри */
+@keyframes arrowFlow {
+    0% {
+        transform: translateX(0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateX(5px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 0.3;
+    }
+}
+
+/* щоб кожна наступна стрілка починала трохи пізніше */
+.arrow-item:nth-of-type(2) .arrow-icon {
+    animation-delay: 0.2s;
+}
+
+.arrow-item:nth-of-type(4) .arrow-icon {
+    animation-delay: 0.4s;
+}
+
+.arrow-item:nth-of-type(6) .arrow-icon {
+    animation-delay: 0.6s;
+}
+
+#services-what .service-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+#services-what .service-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#services-tasks .services-flex {
+    display: flex;
+    justify-content: center;
+    /* центруємо всі items */
+    gap: 4rem;
+    /* відстань між items */
+    flex-wrap: wrap;
+    /* адаптив: дозволяє переноситись */
+}
+
+#services-tasks .service-item {
+    max-width: 280px;
+    /* робимо вужчими */
+    text-align: center;
+    flex: 0 1 280px;
+    /* ширина 280px, але можна стискати */
+    margin: 1rem 0;
+}
+
+#services-tasks .service-item {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+#services-tasks .service-item.visible {
+    opacity: 1;
+}
+
+.implementation {
+   
+    background-color: black;
+    padding-bottom: 10rem;
+    color: #fff;
+    text-align: left;
+}
+
+.implementation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.implementation h1{
+    padding-bottom: 10rem;
+}
+
+.implementation h2{
+    padding-bottom: 4rem;
+}
+
+blockquote {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    font-style: italic;
+    padding-bottom: 4rem;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: .5rem;
+    font-size: .9rem;
+    color: #aaa;
+}
+
+.implementation-text {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.implementation-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.impl-item {
+    flex: 1 1 190px;
+    max-width: 200px;
+    background: transparent;
+}
+
+.impl-number {
+   
+    color: #ff6600;
+    margin-right: 0.4rem;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: color 0.2s;
+    border-right: 1px solid #ff6600;
+}
+
+.impl-item h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    color: #fff;
+}
+
+.impl-item p {
+    font-size: .9rem;
+    color: #bbb;
+}
+
+.supervisor{
+  
+    background-color: black;
+    padding-bottom: 10rem;
+}
+
+.support{
+  
+    background-color: black;
+    padding-bottom: 10rem;
+}
+.indicators{
+
+    background-color: black;
+    padding-bottom: 10rem;
+}
+
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .video-container iframe {
+        height: 220px;
+    }
+}
