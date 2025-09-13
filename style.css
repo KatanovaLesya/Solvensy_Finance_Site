@@ -131,6 +131,10 @@ p {
     font-size: 0.9rem;
     color: #bbb;
 }
+li{
+    font-size: 0.9rem;
+    color: #bbb;
+}
 
 .hero h1 {
     line-height: 1.5;
@@ -446,14 +450,12 @@ blockquote cite {
     display: block;
     object-fit: cover;
 }
-
 .information{
     flex:1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 .information h3{
     margin-top: 0;
     margin-bottom: 2rem;
@@ -471,18 +473,89 @@ blockquote cite {
     color: #bbb;
     margin-bottom: 2rem;
 }
-
 .information p{
     margin-bottom: 4rem;
     font-size: 1.2rem;
 }
-
 .partner-logo{
     width: 100%;
     height: auto;
     display: block;
     margin-top: auto;
 }
+
+.cases{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+}
+.cases-container {
+    position: relative;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.case-card {
+    display: none;
+    justify-content: space-between;
+    gap: 0.5rem;
+    background: none;
+}
+.case-card.active {
+    display: flex;
+}
+.case-card{
+    padding: 2rem;
+}
+.case-icon {
+    flex: 0 0 80px;
+}
+.case-title {
+    flex: 0 0 160px;
+}
+.case-text {
+    flex: 1;
+}
+.case-arrow {
+    flex: 0 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.case-title h3 {
+    margin: 0;
+}
+.case-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+.case-text li {
+    position: relative;
+    padding-left: 1.2rem;
+    line-height: 1.5;
+}
+.case-text li::before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ff6600;
+}
+
+.next-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.next-btn:hover {
+    transform: scale(1.2);
+}
+
+
 
 .support{
   

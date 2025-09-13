@@ -94,3 +94,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   items.forEach(item => observer.observe(item));
 });
+
+const cards = document.querySelectorAll('.case-card');
+const nextBtns = document.querySelectorAll('.next-btn');
+let currentIndex = 0;
+
+function showCard(index) {
+  cards.forEach((card, i) => {
+    card.classList.toggle('active', i === index);
+  });
+}
+
+nextBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % cards.length; // циклічно
+    showCard(currentIndex);
+  });
+});
+
+showCard(currentIndex);
