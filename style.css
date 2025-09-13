@@ -84,7 +84,6 @@ nav a:hover {
 .logo {
     height: 120px;
     width: auto;
-    margin-bottom: 0.1rem;
 }
 
 h1 {
@@ -96,6 +95,7 @@ h1 {
     color: #ffffff;
     text-align: center;
     line-height: 1.1;
+    padding-bottom: 10rem;
 }
 
 h2 {
@@ -119,9 +119,24 @@ h2::after {
 
 }
 
+h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
 .hero h1 {
     line-height: 1.5;
     font-size: 7rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 .hero p {
@@ -139,14 +154,13 @@ h2::after {
 .about-us {
     background-color: black;
     padding-top: 10rem;
-    padding-bottom: 10rem;
 }
 
 .video-section {
     background: black;
     color: white;
-    padding-bottom: 10rem;
     text-align: center;
+    padding-bottom: 10rem;
 }
 
 .video-container {
@@ -164,26 +178,8 @@ h2::after {
     flex-direction: row;
     justify-content: center;
     text-decoration: none;
-    font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-style: normal;
     color: #ffffff;
-    text-align: left;
     margin-top: 4rem;
-}
-
-.video-caption h3 {
-    margin-top: 1rem;
-    margin-bottom: 0.2rem;
-    font-weight: 200;
-    font-size: 1rem;
-}
-
-.video-caption p {
-    font-size: 0.6rem;
-    color: #7a7a7a;
-    margin: 0;
 }
 
 .video-caption a{
@@ -202,17 +198,10 @@ h2::after {
     color: #ff6600;
 }
 
-.video-button{
-    margin-top: 1rem;
-    text-decoration: none;
-    display: inline-block;
-    color: #ffffff;
-
-}
-
 .arrow-item.flipped {
     transform: rotate(180deg);
 }
+
 
 .services-section {
     background: black;
@@ -227,27 +216,6 @@ h2::after {
     margin: auto;
 }
 
-.services-section h2 {
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 3rem;
-    margin: 0;
-    color: #ffffff;
-    padding-bottom: 10rem;
-}
-
-.services-section h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #ff6600;
-    margin: 1rem 0 0;
-
-}
-
 .services-flex {
     display: flex;
     justify-content: space-between;
@@ -257,7 +225,6 @@ h2::after {
 
 .service-item {
     flex: 1 1 200px;
-    /* адаптивна ширина */
     max-width: 250px;
     margin: 0 auto;
     text-align: center;
@@ -281,16 +248,6 @@ h2::after {
 
 .service-item:hover #data path {
     fill: #ff6600 !important;
-}
-
-.service-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.service-item p {
-    font-size: 0.9rem;
-    color: #bbb;
 }
 
 .arrow-item {
@@ -327,16 +284,13 @@ h2::after {
         opacity: 0.3;
     }
 }
-
 /* щоб кожна наступна стрілка починала трохи пізніше */
 .arrow-item:nth-of-type(2) .arrow-icon {
     animation-delay: 0.2s;
 }
-
 .arrow-item:nth-of-type(4) .arrow-icon {
     animation-delay: 0.4s;
 }
-
 .arrow-item:nth-of-type(6) .arrow-icon {
     animation-delay: 0.6s;
 }
@@ -346,66 +300,49 @@ h2::after {
     transform: translateY(30px);
     transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
-
 #services-what .service-item.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
 #services-tasks .services-flex {
     display: flex;
     justify-content: center;
-    /* центруємо всі items */
     gap: 4rem;
-    /* відстань між items */
     flex-wrap: wrap;
-    /* адаптив: дозволяє переноситись */
 }
-
 #services-tasks .service-item {
     max-width: 280px;
-    /* робимо вужчими */
     text-align: center;
     flex: 0 1 280px;
-    /* ширина 280px, але можна стискати */
     margin: 1rem 0;
 }
-
 #services-tasks .service-item {
     opacity: 0;
     transition: opacity 1.5s ease-in;
 }
-
 #services-tasks .service-item.visible {
     opacity: 1;
 }
 
 .implementation {
     background-color: black;
-    padding-bottom: 10rem;
     color: #fff;
     text-align: left;
 }
-
 .implementation-container {
     max-width: 1200px;
     margin: 0 auto;
-}
-.implementation h1{
     padding-bottom: 10rem;
 }
-
 .implementation h2{
     padding-bottom: 4rem;
 }
-
 blockquote {
     font-size: 1.2rem;
     margin: 1rem 0;
     font-style: italic;
     padding-bottom: 4rem;
 }
-
 blockquote cite {
     display: block;
     margin-top: .5rem;
@@ -414,25 +351,21 @@ blockquote cite {
 }
 
 .implementation-text {
-    margin: 2rem 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: center;
     padding-bottom: 4rem;
 }
-
 .implementation-items {
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
     justify-content: center;
 }
-
 .impl-item {
     flex: 1 1 190px;
     max-width: 180px;
     background: transparent;
 }
-
 .impl-number {
    
     color: #ff6600;
@@ -448,23 +381,107 @@ blockquote cite {
     border-right: 1px solid #ff6600;
 }
 
-.impl-item h3 {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    margin-bottom: .5rem;
-    color: #fff;
-}
-
-.impl-item p {
-    font-size: .9rem;
-    color: #bbb;
-}
-
 .supervisor{
-  
     background-color: black;
     padding-bottom: 10rem;
+}
+
+.supervisor-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+}
+.supervisor-container h2{
+    padding-bottom: 6rem;
+}
+.supervisor-text {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+.supervisor-items {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding-bottom: 10rem;
+}
+.super-item {
+    text-align: center;
+    flex: 0 1 280px;
+    margin: 1rem 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+.super-item.visible {
+    opacity: 1;
+}
+.super-item h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+    justify-content: center;
+}
+.super-item svg{
+    margin-bottom: 0.5rem;
+    fill: white;
+    transition: fill 0.3s;
+}
+.super-item:hover svg {
+    fill: #ff6600;
+
+}
+
+.member{
+    display: flex;
+    justify-content:flex-start;
+    gap: 4rem;
+    color: #ffffff;
+    padding-bottom: 6rem;
+}
+.member-photo{
+    width: 50%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.information{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.information h3{
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+      
+}
+.information h4{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    color: #bbb;
+    margin-bottom: 2rem;
+}
+
+.information p{
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+}
+
+.partner-logo{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: auto;
 }
 
 .support{

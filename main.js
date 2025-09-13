@@ -78,3 +78,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
   observer.observe(element);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".super-item");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 600); // по черзі
+        observer.unobserve(entry.target); // один раз
+      }
+    });
+  }, { threshold: 0.3 });
+
+  items.forEach(item => observer.observe(item));
+});
