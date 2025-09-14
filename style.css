@@ -555,7 +555,17 @@ blockquote cite {
     transform: scale(1.2);
 }
 
+.findirector {
+    max-width: 1200px;
+    margin: 0 auto;}
+#supervisor .supervisor-items{
+    padding-bottom: 0rem;
+}
 
+#supervisor .super-item{
+    margin: 0;
+    flex: 0 1 480px;
+}
 
 .support{
   
