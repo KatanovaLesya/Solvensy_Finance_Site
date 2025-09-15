@@ -625,6 +625,43 @@ blockquote cite {
   
     background-color: black;
 }
+
+.support-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.support-container h2 {
+    padding-bottom: 10rem;
+}
+
+.support-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.support-item {
+    flex: 1 1 250px;
+    max-width: 250px;
+    background: transparent;
+}
+
+.support-number {
+
+    color: #ff6600;
+    margin-right: 0.4rem;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: color 0.2s;
+    border-right: 1px solid #ff6600;
+}
 .indicators{
 
     background-color: black;
