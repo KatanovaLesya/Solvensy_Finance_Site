@@ -157,11 +157,8 @@ li{
     margin: 0;
 }
 
-.about-us {
-    background-color: black;
-}
-
 .video-section {
+    padding-top: 10rem;
     background: black;
     color: white;
     text-align: center;
@@ -336,11 +333,14 @@ li{
     max-width: 1200px;
     margin: 0 auto;
 }
+.implementation-container h2{
+    padding-bottom: 2rem;
+}
 blockquote {
     font-size: 1.2rem;
     margin: 1rem 0;
     font-style: italic;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 blockquote cite {
     display: block;
@@ -388,10 +388,19 @@ blockquote cite {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.supervisor-container.impl-group h2{
+    padding-bottom: 4rem;
+}
 .supervisor-text {
     font-size: 1.2rem;
     text-align: center;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
+}
+
+.video-caption.featured{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .supervisor-items {
     display: flex;
@@ -438,6 +447,7 @@ blockquote cite {
     height: auto;
     display: block;
     object-fit: cover;
+ 
 }
 .information{
     flex:1;
@@ -477,6 +487,14 @@ blockquote cite {
     max-width: 1200px;
     margin: 0 auto;
 }
+.cases h2{
+    padding-top: 0rem;
+    padding-bottom: 6rem;
+}
+.cases .last-price{
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+}
 .cases-container {
     position: relative;
     color: white;
@@ -489,7 +507,6 @@ blockquote cite {
     gap: 0.5rem;
     background: none;
 }
-
 .case-card.active {
     display: flex;
 }
@@ -574,12 +591,17 @@ blockquote cite {
     background: transparent;
     border: 2px solid #777;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 0.6rem;
     text-align: center;
     flex: 1;
-    max-width: 200px;
+    max-width: 250px;
     transition: 0.3s, ease;
 }
+.pricing-card p{
+    margin: 0;
+    font-size: 0.8rem;
+}
+
 .pricing-card .price {
     font-size: 2rem;
     margin: 1rem 0;
