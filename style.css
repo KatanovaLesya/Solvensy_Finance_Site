@@ -62,8 +62,10 @@ nav a:hover {
 
 /* --- Hero --- */
 .hero {
-    position: relative;
+    position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -666,6 +668,25 @@ blockquote cite {
 
     background-color: black;
 }
+
+.indicators-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partners {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4rem;
+    color: #ffffff;
+    padding-bottom: 6rem;
+}
+
+.partners-logo {
+    width: 50%;
+    height: auto;
+    display: block;
+    object-fit: cover;}
 
 
 /* Адаптив */
