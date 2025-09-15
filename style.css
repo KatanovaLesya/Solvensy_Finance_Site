@@ -107,8 +107,8 @@ h2 {
     font-size: 3rem;
     margin: 0;
     color: #ffffff;
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
 }
 
 h2::after {
