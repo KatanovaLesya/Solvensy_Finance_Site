@@ -113,3 +113,11 @@ nextBtns.forEach(btn => {
 });
 
 showCard(currentIndex);
+
+window.addEventListener("load", function() {
+  let loader = document.getElementById("loader");
+  let content = document.getElementById("content");
+
+  loader.style.display = "none";  // ховаємо лоадер
+  content.style.display = "block"; // показуємо контент
+});

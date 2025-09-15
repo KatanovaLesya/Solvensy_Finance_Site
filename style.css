@@ -4,6 +4,40 @@ body {
     background: black;
 }
 
+/* Фон для лоадера */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    /* чорний фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+/* Анімація */
+.spinner {
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #ff6600;
+    /* кольорова частина */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* --- Header --- */
 header {
     background: black;
@@ -13,7 +47,6 @@ header {
     width: 100%;
     z-index: 1000;
 }
-
 .header-container {
     display: flex;
     align-items: center;
@@ -23,12 +56,10 @@ header {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 }
-
 nav {
     display: flex;
     gap: 1.6rem;
 }
-
 nav a {
     text-decoration: none;
     font-family: "Oswald", sans-serif;
@@ -40,11 +71,9 @@ nav a {
     color: #ffffff;
     transition: color 0.2s;
 }
-
 nav a:hover {
     color: #ff6600;
 }
-
 .phone a {
     text-decoration: none;
     font-family: "Oswald", sans-serif;
@@ -56,11 +85,9 @@ nav a:hover {
     color: #ffffff;
 
 }
-
 .phone a:hover {
     color: #ff6600;
 }
-
 /* --- Hero --- */
 .hero {
     position: center;
@@ -76,18 +103,15 @@ nav a:hover {
     background-size: cover;
     color: white;
 }
-
 .hero-content {
     position: relative;
     z-index: 2;
    
 }
-
 .logo {
     height: 120px;
     width: auto;
 }
-
 h1 {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
@@ -100,7 +124,6 @@ h1 {
     padding-bottom: 5rem;
     padding-top: 10rem;
 }
-
 h2 {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
@@ -112,7 +135,6 @@ h2 {
     padding-bottom: 10rem;
     padding-top: 10rem;
 }
-
 h2::after {
     content: "";
     display: block;
@@ -122,7 +144,6 @@ h2::after {
     margin: 1rem 0 0;
 
 }
-
 h3 {
     font-family: "Oswald", sans-serif;
     font-size: 1.2rem;
@@ -130,7 +151,6 @@ h3 {
     color: #ffffff;
     letter-spacing: 0.1em;
 }
-
 p {
     font-size: 0.9rem;
     color: #bbb;
@@ -139,14 +159,12 @@ li{
     font-size: 0.9rem;
     color: #bbb;
 }
-
 .hero h1 {
     line-height: 1.5;
     font-size: 7rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
-
 .hero p {
     font-size: 1.5rem;
     font-family: "Oswald", sans-serif;
@@ -158,24 +176,20 @@ li{
     color: #ffffff;
     margin: 0;
 }
-
 .video-section {
     padding-top: 10rem;
     background: black;
     color: white;
     text-align: center;
 }
-
 .video-container {
     max-width: 800px;
     margin: 0 auto;
 }
-
 .video-container iframe {
     width: 100%;
     height: 450px;
 }
-
 .video-caption {
     display: flex;
     flex-direction: row;
@@ -184,7 +198,6 @@ li{
     color: #ffffff;
     margin-top: 4rem;
 }
-
 .video-caption a{
     text-decoration: none;
     font-style: normal;
@@ -196,11 +209,9 @@ li{
     color: #ffffff;
     
 }
-
 .video-caption a:hover {
     color: #ff6600;
 }
-
 .arrow-item.flipped {
     transform: rotate(180deg);
 }
@@ -210,34 +221,29 @@ li{
     background: black;
     color: white;
 }
-
 .services-container {
     position: relative;
     z-index: 2;
     max-width: 1200px;
     margin: auto;
 }
-
 .services-flex {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
 }
-
 .service-item {
     flex: 1 1 200px;
     max-width: 250px;
     margin: 0 auto;
     text-align: center;
 }
-
 .service-item svg {
     margin-bottom: 0.5rem;
     fill: white;
     transition: fill 0.3s;
 }
-
 .service-item:hover svg {
     fill: #ff6600;
 
@@ -247,11 +253,9 @@ li{
     fill: white !important;
     transition: fill 0.3s;
 }
-
 .service-item:hover #data path {
     fill: #ff6600 !important;
 }
-
 .arrow-item {
     flex: 0 0 auto;
     /* стрілка займає тільки свій розмір */
@@ -260,7 +264,6 @@ li{
     justify-content: center;
     margin: 0 1rem;
 }
-
 .arrow-icon {
     width: 30px;
     height: 30px;
