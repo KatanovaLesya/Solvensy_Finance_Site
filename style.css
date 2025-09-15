@@ -95,7 +95,8 @@ h1 {
     color: #ffffff;
     text-align: center;
     line-height: 1.1;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
+    padding-top: 10rem;
 }
 
 h2 {
@@ -106,7 +107,8 @@ h2 {
     font-size: 3rem;
     margin: 0;
     color: #ffffff;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
 }
 
 h2::after {
@@ -157,14 +159,12 @@ li{
 
 .about-us {
     background-color: black;
-    padding-top: 10rem;
 }
 
 .video-section {
     background: black;
     color: white;
     text-align: center;
-    padding-bottom: 10rem;
 }
 
 .video-container {
@@ -210,7 +210,6 @@ li{
 .services-section {
     background: black;
     color: white;
-    padding-bottom: 10rem;
 }
 
 .services-container {
@@ -336,10 +335,6 @@ li{
 .implementation-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 10rem;
-}
-.implementation h2{
-    padding-bottom: 4rem;
 }
 blockquote {
     font-size: 1.2rem;
@@ -387,16 +382,11 @@ blockquote cite {
 
 .supervisor{
     background-color: black;
-    padding-bottom: 10rem;
 }
 
 .supervisor-container{
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 10rem;
-}
-.supervisor-container h2{
-    padding-bottom: 6rem;
 }
 .supervisor-text {
     font-size: 1.2rem;
@@ -408,7 +398,6 @@ blockquote cite {
     justify-content: center;
     gap: 4rem;
     flex-wrap: wrap;
-    padding-bottom: 10rem;
 }
 .super-item {
     text-align: center;
@@ -487,7 +476,6 @@ blockquote cite {
 .cases{
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 10rem;
 }
 .cases-container {
     position: relative;
@@ -501,6 +489,7 @@ blockquote cite {
     gap: 0.5rem;
     background: none;
 }
+
 .case-card.active {
     display: flex;
 }
@@ -559,9 +548,7 @@ blockquote cite {
     max-width: 1200px;
     margin: 0 auto;
 }
-#supervisor .supervisor-items{
-    padding-bottom: 10rem;
-}
+
 #supervisor .super-item{
     margin: 0;
     flex: 0 1 480px;
@@ -608,12 +595,10 @@ blockquote cite {
 .support{
   
     background-color: black;
-    padding-bottom: 10rem;
 }
 .indicators{
 
     background-color: black;
-    padding-bottom: 10rem;
 }
 
 
