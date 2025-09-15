@@ -80,8 +80,7 @@ nav a:hover {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
-    margin: auto;
+   
 }
 
 .logo {
