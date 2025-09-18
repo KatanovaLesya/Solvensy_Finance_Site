@@ -121,3 +121,48 @@ window.addEventListener("load", function() {
   loader.style.display = "none";  // ховаємо лоадер
   content.style.display = "block"; // показуємо контент
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const implItems = document.querySelectorAll(".impl-item");
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        obs.unobserve(entry.target); // анімація тільки один раз
+      }
+    });
+  }, {
+    threshold: 0.2 // 20% блоку видно → запускається
+  });
+
+  implItems.forEach(item => observer.observe(item));
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const element = document.querySelector(".supervisor-text");
+  const text = element.textContent.trim();
+  element.textContent = ""; // очищаємо текст
+
+  let i = 0;
+  let hasPlayed = false; // щоб ефект не повторювався кожного разу
+
+  function typeWriter() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50); // швидкість печатання
+    }
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasPlayed) {
+        hasPlayed = true;
+        typeWriter();
+      }
+    });
+  }, { threshold: 0.6 }); // 0.6 = спрацює, коли видно 60% елемента
+
+  observer.observe(element);
+});

@@ -153,8 +153,9 @@ h3 {
     letter-spacing: 0.1em;
 }
 p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #bbb;
+    text-align: start;
 }
 
 svg {
@@ -191,6 +192,7 @@ li{
     font-style: normal;
     color: #ffffff;
     margin: 0;
+    text-align: center;
 }
 .video-section {
     padding-top: 10rem;
@@ -253,19 +255,7 @@ li{
     flex: 1 1 200px;
     max-width: 250px;
     margin: 0 auto;
-    text-align: center;
-}
-.service-item svg {
-    margin-bottom: 0.5rem;
-    fill: white;
-    transition: all 0.3s ease;
-    overflow: visible;
-}
-.service-item:hover svg {
-    fill: white;
-    stroke: none;
-    filter: 
-        drop-shadow(0 0 10px #fff);
+    text-align:center;
 }
 
 .arrow-item {
@@ -335,10 +325,20 @@ li{
 }
 #services-tasks .service-item {
     opacity: 0;
-    transition: opacity 1.5s ease-in;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
 }
-#services-tasks .service-item.visible {
+#services-tasks .service-item.visible:nth-child(2) {
     opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+#services-tasks .service-item.visible:nth-child(1), 
+#services-tasks .service-item.visible:nth-child(3){
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
 }
 
 .implementation {
@@ -353,35 +353,39 @@ li{
 .implementation-container h2{
     padding-bottom: 2rem;
 }
-blockquote {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    font-style: italic;
-    padding-bottom: 2rem;
-}
-blockquote cite {
-    display: block;
-    margin-top: .5rem;
-    font-size: .9rem;
-    color: #aaa;
-}
 
 .implementation-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 .implementation-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 2rem;
     justify-content: center;
 }
 .impl-item {
-    flex: 1 1 190px;
-    max-width: 180px;
+    flex: 1 1 calc(33% - 2rem);
+    max-width: 320px;
     background: transparent;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
+.impl-item.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.impl-item:nth-child(1) { transition-delay: 0.2s; }
+.impl-item:nth-child(2) { transition-delay: 0.6s; }
+.impl-item:nth-child(3) { transition-delay: 1s; }
+.impl-item:nth-child(4) { transition-delay: 1.4s; }
+.impl-item:nth-child(5) { transition-delay: 1.8s;
+}
+
 .impl-number {
    
     color: #ff6600;
@@ -410,7 +414,7 @@ blockquote cite {
     padding-bottom: 4rem;
 }
 .supervisor-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     padding-bottom: 2rem;
 }
