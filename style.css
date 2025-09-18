@@ -46,6 +46,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
+    margin-bottom: 2rem;
 }
 .header-container {
     display: flex;
@@ -155,34 +156,21 @@ p {
     font-size: 0.9rem;
     color: #bbb;
 }
+
 svg {
-    padding-top: 2rem;
-    outline: none !important;
-    stroke: none !important;
-    border: none !important;
-}
-svg:focus{
-    outline: none !important;
-    border: none !important;
-    stroke: none !important;
-}
-svg:hover{
-    outline: none !important;
-    border: none !important;
-    stroke: none !important;
+    fill: white;
+    transition: all 0.3s ease;
+    overflow: visible;
 }
 
-svg:active {
-    outline: none !important;
-    border: none !important;
-    stroke: none !important;
+svg:hover {
+    fill: white;
+    stroke: none;
+    filter:
+        drop-shadow(0 0 15px #fff);
 }
 
-svg path{
-    outline: none !important;
-    border: none !important;
-    stroke: none !important;
-}
+
 li{
     font-size: 0.9rem;
     color: #bbb;
@@ -271,14 +259,13 @@ li{
     margin-bottom: 0.5rem;
     fill: white;
     transition: all 0.3s ease;
+    overflow: visible;
 }
-.service-item:hover svg, .service-item:focus svg {
+.service-item:hover svg {
     fill: white;
     stroke: none;
     filter: 
-        drop-shadow(0 0 5px #fff)
-        drop-shadow(0 0 10px #fff)
-        drop-shadow(0 0 20px #fff);
+        drop-shadow(0 0 10px #fff);
 }
 
 .arrow-item {
@@ -454,18 +441,8 @@ blockquote cite {
     align-items: center;
     justify-content: center;
 }
-.super-item svg{
-    fill: white;
-    transition: all 0.3s ease;
-}
-.super-item:hover svg {
-    fill: white;
-    filter:
-        drop-shadow(0 0 5px #fff) 
-        drop-shadow(0 0 10px #fff) 
-        drop-shadow(0 0 20px #fff) 
-        drop-shadow(0 0 40px #fff);
-}
+
+
 
 .member{
     display: flex;
