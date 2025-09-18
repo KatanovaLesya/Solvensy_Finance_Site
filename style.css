@@ -450,16 +450,19 @@ li{
 
 .member{
     display: flex;
-    justify-content:flex-start;
+    align-items: flex-start;
     gap: 4rem;
     color: #ffffff;
-    padding-bottom: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
 }
 .member-photo{
-    width: 50%;
+    width: 35%;
+    max-width: 300px;
     height: auto;
-    display: block;
     object-fit: cover;
+    border-radius: 8px;
  
 }
 .information{
@@ -467,33 +470,37 @@ li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-height: 100%;
 }
 .information h3{
     margin-top: 0;
-    margin-bottom: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 2rem;
       
 }
-.information h4{
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-family: "Oswald", sans-serif;
-    letter-spacing: 0.2em;
-    font-weight: 400;
-    color: #bbb;
-    margin-bottom: 2rem;
-}
-.information p{
-    margin-bottom: 4rem;
+
+.position {
+    font-weight: 700;
     font-size: 1.2rem;
 }
+
 .partner-logo{
-    width: 100%;
+
     height: auto;
     display: block;
+    max-width: 50%;
     margin-top: auto;
+    align-self: flex-start;
+}
+blockquote {
+    font-style: italic;
+    font-size: 0.7rem;
+    font-weight: 200;
+    color: #bbb;
+    letter-spacing: 0.05em;
+    padding-bottom: 2rem;
+  
 }
 
 .cases{
