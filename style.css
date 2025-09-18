@@ -155,6 +155,34 @@ p {
     font-size: 0.9rem;
     color: #bbb;
 }
+svg {
+    padding-top: 2rem;
+    outline: none !important;
+    stroke: none !important;
+    border: none !important;
+}
+svg:focus{
+    outline: none !important;
+    border: none !important;
+    stroke: none !important;
+}
+svg:hover{
+    outline: none !important;
+    border: none !important;
+    stroke: none !important;
+}
+
+svg:active {
+    outline: none !important;
+    border: none !important;
+    stroke: none !important;
+}
+
+svg path{
+    outline: none !important;
+    border: none !important;
+    stroke: none !important;
+}
 li{
     font-size: 0.9rem;
     color: #bbb;
@@ -242,20 +270,17 @@ li{
 .service-item svg {
     margin-bottom: 0.5rem;
     fill: white;
-    transition: fill 0.3s;
+    transition: all 0.3s ease;
 }
-.service-item:hover svg {
-    fill: #ff6600;
+.service-item:hover svg, .service-item:focus svg {
+    fill: white;
+    stroke: none;
+    filter: 
+        drop-shadow(0 0 5px #fff)
+        drop-shadow(0 0 10px #fff)
+        drop-shadow(0 0 20px #fff);
+}
 
-}
-
-#data path {
-    fill: white !important;
-    transition: fill 0.3s;
-}
-.service-item:hover #data path {
-    fill: #ff6600 !important;
-}
 .arrow-item {
     flex: 0 0 auto;
     /* стрілка займає тільки свій розмір */
@@ -431,11 +456,15 @@ blockquote cite {
 }
 .super-item svg{
     fill: white;
-    transition: fill 0.3s;
+    transition: all 0.3s ease;
 }
 .super-item:hover svg {
-    fill: #ff6600;
-
+    fill: white;
+    filter:
+        drop-shadow(0 0 5px #fff) 
+        drop-shadow(0 0 10px #fff) 
+        drop-shadow(0 0 20px #fff) 
+        drop-shadow(0 0 40px #fff);
 }
 
 .member{
