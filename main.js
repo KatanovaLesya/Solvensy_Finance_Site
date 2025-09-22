@@ -182,8 +182,8 @@ document.addEventListener("DOMContentLoaded", function () {
     current = (current + 1) % cards.length;
   }
 
-  // Запускати автоматично кожні 5 секунд
-  setInterval(showNextCase, 5000);
+  // Запускати автоматично кожні 10 секунд
+  setInterval(showNextCase, 15000);
 
   // Показати перший одразу
   showNextCase();

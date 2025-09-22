@@ -595,9 +595,7 @@ blockquote {
     fill: white !important;
     transition: fill 0.3s;
 }
-.super-item:hover #fi_13429085 path {
-    fill: #ff6600 !important;
-}
+
 .findirector-container h2 {
     padding-bottom: 6rem;
     
@@ -630,6 +628,7 @@ blockquote {
 .pricing-card p{
     margin: 0;
     font-size: 0.8rem;
+    text-align: center;
 }
 
 .pricing-card .price {
@@ -641,7 +640,7 @@ blockquote {
 }
 .more-text{
     color: #ff6600;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .support{
