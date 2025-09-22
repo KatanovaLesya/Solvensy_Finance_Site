@@ -188,3 +188,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // Показати перший одразу
   showNextCase();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".support-item");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        items.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add("visible");
+          }, index * 400); // затримка між появами
+        });
+        observer.disconnect(); // зупиняємо після першого запуску
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (items.length > 0) {
+    observer.observe(items[0].parentElement); // спостерігаємо за контейнером
+  }
+});
