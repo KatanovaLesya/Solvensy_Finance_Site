@@ -166,3 +166,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
   observer.observe(element);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".case-card");
+  let current = 0;
+
+  function showNextCase() {
+    // Приховуємо всі кейси
+    cards.forEach(card => card.classList.remove("active"));
+
+    // Показуємо поточний
+    cards[current].classList.add("active");
+
+    // Переходимо до наступного
+    current = (current + 1) % cards.length;
+  }
+
+  // Запускати автоматично кожні 5 секунд
+  setInterval(showNextCase, 5000);
+
+  // Показати перший одразу
+  showNextCase();
+});
