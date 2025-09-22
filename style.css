@@ -523,28 +523,25 @@ blockquote {
 }
 .case-card {
     display: none;
-    justify-content: space-between;
-    gap: 0.5rem;
+    justify-content: center;
     background: none;
 }
 .case-card.active {
     display: flex;
 }
-.case-card{
-    padding: 2rem;
-}
 .case-icon {
     flex: 0 0 80px;
     text-align: center;
+    justify-content: center;
 }
 .case-title {
     flex: 0 0 160px;
     text-align: center;
     padding-top: 0.4rem;
+    
 }
 .case-text {
     flex: 1;
-    padding-top: 0.4rem;
 }
 .case-arrow {
     flex: 0 0 60px;
