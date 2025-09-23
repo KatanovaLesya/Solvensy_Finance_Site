@@ -781,8 +781,9 @@ blockquote {
 .graphs{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:flex-start;
     gap: 4rem;
+    padding-bottom: 10rem;
 }
 .graph-item{
     display: flex;
@@ -801,8 +802,8 @@ blockquote {
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     color:#bbb;
     position: relative;
 
