@@ -40,7 +40,7 @@ body {
 
 /* --- Header --- */
 header {
-    background: black;
+    background: rgb(0, 0, 0, 0.6);
     position: fixed;
     top: 0;
     left: 0;
@@ -89,6 +89,16 @@ nav a:hover {
 .phone a:hover {
     color: #ff6600;
 }
+
+header {
+    transition: all 0.3s ease;
+}
+
+header.shrink .header-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 /* --- Hero --- */
 .hero {
     position: center;
@@ -201,12 +211,20 @@ li {
     text-align: center;
 }
 .video-container {
-    max-width: 800px;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    overflow: hidden;
     margin: 0 auto;
 }
 .video-container iframe {
     width: 100%;
-    height: 450px;
+    height: 100%;
+    border: none;
+    color: white;
+    display: block;
+    
 }
 .video-caption {
     display: flex;
@@ -701,22 +719,45 @@ blockquote {
     margin: 0 auto;
 }
 
-.partners {
-    display: flex;
-    justify-content: flex-start;
-    gap: 4rem;
-    color: #ffffff;
-    padding-bottom: 6rem;
-}
-
-.partners-logo {
-    width: auto;
-    height: 100%;
-    max-height: 300px;
-    display: block;
-    object-fit: cover;
+.indicators-container h2 {
+    padding-bottom: 4rem;
     
 }
+.indicators-container p {
+   padding-bottom: 4rem;
+    text-align: center;
+
+}
+
+
+/* Логотипи картинкою */
+.partners-marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background: black;
+    padding: 2rem 0;
+}
+
+.marquee-content{
+    display: flex;
+    gap: 3rem;
+    animation: marquee 25s linear infinite;
+    padding-bottom: 10rem;
+}
+
+.marquee-content img{
+    width: auto;
+    height: 120px;
+    flex-shrink: 0;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }}
 
 
 /* Адаптив */
