@@ -40,7 +40,7 @@ body {
 
 /* --- Header --- */
 header {
-    background: rgb(0, 0, 0, 0.6);
+    background: rgb(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
@@ -110,7 +110,7 @@ header.shrink .header-container {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('./images/hero2026.jpg') no-repeat center center;
+    background: url('./images/hero1.jpg') no-repeat center center;
     background-size: cover;
     color: white;
 }
