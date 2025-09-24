@@ -98,6 +98,9 @@ header.shrink .header-container {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+header.shrink{
+    background: rgb(0, 0, 0);
+}
 
 /* --- Hero --- */
 .hero {
