@@ -135,8 +135,8 @@ h1 {
     color: #ffffff;
     text-align: center;
     line-height: 1.1;
-    padding-bottom: 5rem;
     padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 h2 {
     font-family: "Oswald", sans-serif;
@@ -147,7 +147,6 @@ h2 {
     margin: 0;
     color: #ffffff;
     padding-bottom: 10rem;
-    padding-top: 10rem;
 }
 h2::after {
     content: "";
@@ -212,6 +211,7 @@ li {
     background: black;
     color: white;
     text-align: center;
+    padding-bottom: 10rem;
 }
 .video-container {
     position: relative;
@@ -332,11 +332,16 @@ li {
     opacity: 1;
     transform: translateY(0);
 }
+#services-what .services-flex {
+    padding-bottom: 10rem;
+}
 #services-tasks .services-flex {
     display: flex;
     justify-content: center;
     gap: 4rem;
     flex-wrap: wrap;
+    
+   
 }
 #services-tasks .service-item {
     max-width: 280px;
@@ -372,19 +377,20 @@ li {
     margin: 0 auto;
 }
 .implementation-container h2{
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
 }
 
 .implementation-text {
     font-size: 1rem;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
 }
 .implementation-items {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    padding-bottom: 10rem;
 }
 .impl-item {
     flex: 1 1 calc(33% - 2rem);
@@ -434,12 +440,14 @@ li {
 .supervisor-container.impl-group h2{
     padding-bottom: 4rem;
 }
-
+.supervisor-container.impl-group{
+    padding-bottom: 10rem;
+}
 
 .supervisor-text {
     font-size: 1rem;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
 }
 
 .text-term{
@@ -456,6 +464,7 @@ li {
     justify-content: center;
     gap: 4rem;
     flex-wrap: wrap;
+    padding-bottom: 10rem;
 }
 .super-item {
     text-align: center;
@@ -537,11 +546,11 @@ blockquote {
 }
 .cases h2{
     padding-top: 0rem;
-    padding-bottom: 6rem;
+  
 }
 .cases .last-price{
     padding-top: 10rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
 }
 .cases-container {
     position: relative;
@@ -625,12 +634,12 @@ blockquote {
 }
 
 .findirector-container h2 {
-    padding-bottom: 6rem;
+    padding-bottom: 10rem;
     
 }
 
 .findir-price-title {
-    padding-top: 0;
+    padding-top: 10rem;
 }
 
 .pricing-card.fin-price{
@@ -775,6 +784,7 @@ blockquote {
     justify-content: center;
     gap: 4rem;
     flex-wrap: wrap;
+    padding-bottom: 10rem;
     
 }
 .video-item h3{
