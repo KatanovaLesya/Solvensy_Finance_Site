@@ -901,15 +901,30 @@ blockquote {
 /* ---------------------- */
 @media (max-width: 1199px) and (min-width: 768px) {
 
-    .header-container,
     .services-container,
     .implementation-container,
     .supervisor-container,
     .cases,
     .support-container,
+    .findirector,
+    .footer-container,
     .indicators-container {
         max-width: 90%;
     }
+    .header-container{
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero{
+        background-position: center center;
+    }
+   
 
     nav {
         gap: 1rem;
@@ -926,6 +941,20 @@ blockquote {
         padding-bottom: 6rem;
     }
 
+    .video-section{
+        padding-bottom: 6rem;
+    }
+    #services-what .services-flex {
+        padding-bottom: 6rem;
+        }
+    .implementation-items{
+        padding-bottom: 6rem;
+    }
+
+    .supervisor-container.impl-group {
+        padding-bottom: 6rem;
+        }
+
     .services-flex,
     .implementation-items,
     .supervisor-items,
@@ -935,6 +964,13 @@ blockquote {
         gap: 2rem;
 
     }
+
+    .supervisor-items{
+        padding-bottom: 6rem;
+    }
+
+    .cases .last-price {
+            padding-top: 6rem;}
 
     .service-item p {
         text-align: center;
@@ -952,25 +988,36 @@ blockquote {
     }
 
     .member {
-        flex-direction: column;
         gap: 2rem;
-        text-align: center;
+    }
+    .findirector-container h2 {
+        padding-bottom: 6rem;
+    }
+    .findir-price-title {
+        padding-top: 6rem;
     }
 
-    .member-photo {
-        width: 60%;
-        max-width: 250px;
-        margin: 0 auto;
+    .support-container h2 {
+        padding-bottom: 6rem;
     }
 
-    .partner-logo {
-        max-width: 70%;
-        margin: 2rem auto 0;
-        display: block;
+    .information{
+        font-size: 0.9rem;
     }
-    .scrollTopBtn{
-        
+    .information h3{
+        font-size: 1.6rem;
     }
+    .marquee-content {
+        padding-bottom: 6rem;
+    }
+    .video-response {
+        padding-bottom: 6rem;
+
+    }
+    .graphs {
+        padding-bottom: 6rem;
+    }
+
 }
 
 /* ---------------------- */
@@ -979,7 +1026,7 @@ blockquote {
 @media (max-width: 767px) {
     .header-container {
         flex-direction: column;
-        align-items: center;
+        gap:0.8rem;
         padding: 1rem;
     }
 
