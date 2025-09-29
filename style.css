@@ -1035,18 +1035,20 @@ blockquote {
 /* ---------------------- */
 @media (max-width: 767px) {
     .header-container {
-        flex-direction: column;
         gap:0.8rem;
         padding: 1rem;
     }
 
     nav {
-        flex-direction: column;
-        gap: 0.8rem;
+        gap: 0.2rem;
+    }
+
+    nav a {
+        font-size: 0.6rem;
     }
 
     .phone {
-        margin-top: 0.5rem;
+        font-size: 0.6rem;
     }
 
     h1 {
@@ -1067,6 +1069,10 @@ blockquote {
 
     .logo {
         height: 80px;
+    }
+
+    .hero h1 {
+    font-size: 3rem;     
     }
 
     .video-container {
