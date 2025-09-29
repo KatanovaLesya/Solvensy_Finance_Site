@@ -1021,6 +1021,15 @@ blockquote {
 
 }
 
+@media (max-width: 880px) and (min-width: 768px){
+    nav a {
+            font-size: 0.9rem;
+        }
+    .phone a {
+        font-size: 0.9rem;
+
+}}
+
 /* ---------------------- */
 /* Mobile (до 767px) */
 /* ---------------------- */
