@@ -477,6 +477,9 @@ li {
     flex-wrap: wrap;
     padding-bottom: 10rem;
 }
+.supervisor-items p{
+    margin: 0;
+}
 .super-item {
     text-align: center;
     flex: 0 1 280px;
