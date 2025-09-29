@@ -1037,26 +1037,28 @@ blockquote {
     .header-container {
         gap:0.8rem;
         padding: 1rem;
+        align-items:flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
     }
 
     nav {
         gap: 0.4rem;
-        flex-direction: row;
-        flex-wrap: wrap;
-        max-width: 300px;
-        margin-left: 0;
     }
 
     nav a {
         font-size: 0.6rem;
     }
-
-    .phone {
+    .phone{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .phone a{
         font-size: 0.6rem;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
@@ -1064,6 +1066,7 @@ blockquote {
     h2 {
         font-size: 1.6rem;
         padding-bottom: 3rem;
+        padding-left: 1.5rem;
     }
 
     p {
@@ -1078,6 +1081,9 @@ blockquote {
     .hero h1 {
     font-size: 3rem;     
     }
+    .hero p {
+        font-size: 1rem;
+    }
 
     .video-container {
         height: auto;
@@ -1085,8 +1091,34 @@ blockquote {
     }
 
     .video-caption {
-        flex-direction: column;
         gap: 1rem;
+        margin-top: 0;
+        padding-bottom: 3rem;
+    }
+    .video-section {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+}
+    .video-caption a {
+        font-size: 1.2rem;
+}
+
+    #services-what .services-flex {
+        padding-bottom: 3rem;
+    }
+    .services-container{
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    #services-tasks .service-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #services-tasks .services-flex{
+        gap: 0;
     }
 
     .services-flex,
@@ -1108,7 +1140,37 @@ blockquote {
         max-width: 100%;
     }
 
+    .implementation-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .implementation-text {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: 0.9rem;
+        padding-bottom: 2rem;
+    }
+
+    .implementation-items p {
+        text-align: start;
+    }
+
+    .implementation-items {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .supervisor-items {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 3rem;
+    }
+
     .member {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
         flex-direction: column;
         text-align: center;
     }
@@ -1118,17 +1180,72 @@ blockquote {
         margin: 0 auto;
     }
 
+    .information h3 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
     .partner-logo {
         max-width: 80%;
         margin: 2rem auto 0;
     }
 
+    blockquote {
+        padding-bottom: 0;
+    }
+
+    .supervisor-container.impl-group {
+        padding-bottom: 3rem;
+    }
+
+    .case-card {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .case-arrow {
+        display: none;
+    }
+
+    .case-title h3{
+        padding-bottom: 1rem;
+
+    }
+
+    li {
+        font-size: 0.8rem;
+        padding-bottom: 1rem;
+    }
+
+    .cases .last-price {
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
+        }
+    .supervisor-text {
+        font-size: 0.9rem;
+        padding-bottom: 1.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+}
+
     .graphs {
         justify-content: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 3rem;
     }
 
     .graphs .graph-item {
         width: 100%;
+    }
+
+    .graph-item img {
+        width: 100%;
+        height: auto;
     }
 
     .pricing-container {
@@ -1137,7 +1254,66 @@ blockquote {
     }
 
     .pricing-card {
-        max-width: 90%;
+        max-width: 80%;
         width: 100%;
     }
+
+    #supervisor .super-item {
+        flex: 0 1 100%;
+    }
+
+    .findirector-container h2 {
+        padding-bottom: 3rem;
+    }
+    .findir-price-title {
+        padding-top: 3rem;
+}
+
+    .support-container h2 {
+        padding-bottom: 3rem;
+    }
+
+    .support-items p {
+        text-align:start;
+    }
+
+    .support-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .indicators {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .indicators-container p {
+        padding-bottom: 1.5rem;
+        font-size: 0.9rem;}
+    .marquee-content{
+        padding-bottom: 3rem;
+    }
+    .indicators-container h2 {
+        padding-bottom: 1.5rem;
+    }  
+    .video-response {
+        padding-bottom: 3rem;
+    }
+    .footer-container {
+        flex-direction: column;
+        padding: 0;
+    }
+    .footer-media {
+        padding-bottom: 1rem;
+    }
+    .footer-contract {
+        margin: 0;
+        padding: 0;
+    }
+    .footer-contract p{
+        margin: 0;
+        margin-bottom: 0.5rem;
+        padding: 0;
+    }
+.footer-text {
+    display: none;
+}
 }
