@@ -63,20 +63,20 @@
     <section class="video-section">
         <div class="video-container">
             <!-- Відео з YouTube -->
-            <iframe src="https://www.youtube.com/embed/qvwrDvJr0I8?vq=hd1080&rel=0&autoplay=1&controls=1&modestbranding=1&mute=1" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            <iframe id="myVideo" src="https://www.youtube.com/embed/qvwrDvJr0I8?vq=hd1080&rel=0&autoplay=0&controls=1&modestbranding=1&mute=0&playsinline=1&enablejsapi=1" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
             </iframe>
+            <div id="videoOverlay" class="video-overlay">
+                Переглянути ще раз
+            </div>
 
             <!-- Відео локальне (закоментовано, для майбутнього використання) 
-            
             <video controls>
                 <source src="./video/IMG_1106.MOV" type="video/mp4">
                 Ваш браузер не підтримує відео.
             </video>
         -->
-
-            <!-- Підпис -->
         </div>
         <div class="video-caption">
             <div class="arrow-item">

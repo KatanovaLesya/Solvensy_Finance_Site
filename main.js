@@ -238,3 +238,68 @@ scrollTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+// ===== YouTube Video Control =====
+
+// 1. Підключаємо YouTube IFrame API
+const tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+document.head.appendChild(tag);
+
+let player;
+
+// 2. Ініціалізація плеєра після завантаження API
+function onYouTubeIframeAPIReady() {
+  console.log("✅ YouTube API Ready");
+
+  player = new YT.Player("myVideo", {
+    events: {
+      onReady: () => {
+        console.log("▶️ Player Ready");
+        setupObserver();
+      },
+      onStateChange: onPlayerStateChange
+    }
+  });
+}
+
+// 3. IntersectionObserver → запуск і пауза відео при скролі
+function setupObserver() {
+  const videoSection = document.querySelector(".video-section");
+  console.log("👀 Observer attached to:", videoSection);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("🎬 Section visible → play");
+          player.playVideo();
+        } else {
+          console.log("⏸️ Section hidden → pause");
+          player.pauseVideo();
+        }
+      });
+    },
+    { threshold: 0.5 } // хоча б 50% секції має бути видно
+  );
+
+  observer.observe(videoSection);
+}
+
+// 4. Показ оверлею після завершення відео
+function onPlayerStateChange(event) {
+  const overlay = document.getElementById("videoOverlay");
+
+  if (event.data === YT.PlayerState.ENDED) {
+    console.log("🏁 Video ended → show overlay");
+    overlay.style.display = "flex";
+  }
+}
+
+// 5. Клік по оверлею → перезапуск відео
+document.getElementById("videoOverlay").addEventListener("click", () => {
+  console.log("🔁 Overlay clicked → restart video");
+  player.seekTo(0);
+  player.playVideo();
+  document.getElementById("videoOverlay").style.display = "none";
+});
