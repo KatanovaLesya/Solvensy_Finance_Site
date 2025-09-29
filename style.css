@@ -911,9 +911,9 @@ blockquote {
     .indicators-container {
         max-width: 90%;
     }
-    .header-container{
+        header .header-container{
         width: 100%;
-        max-width: none;
+        max-width: 90%;
         margin: 0;
         padding: 1rem 2rem;
         display: flex;
@@ -1016,6 +1016,7 @@ blockquote {
     }
     .graphs {
         padding-bottom: 6rem;
+        flex-wrap: wrap;
     }
 
 }
