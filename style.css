@@ -1248,7 +1248,10 @@ blockquote {
         padding-right: 0.5rem;
         padding-bottom: 3rem;
     }
-
+    .support-items {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
     .supervisor-items {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
