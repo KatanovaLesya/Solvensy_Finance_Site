@@ -1189,6 +1189,10 @@ blockquote {
     .video-caption a {
         font-size: 1.2rem;
 }
+    #unmuteBtn svg, #iconMute svg {
+        width: 20px;
+        height: 20px;
+    }
 
     #services-what .services-flex {
         padding-bottom: 3rem;
