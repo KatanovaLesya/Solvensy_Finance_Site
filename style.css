@@ -1448,8 +1448,8 @@ blockquote {
         font-size: 0.7rem;
     }
     #unmuteBtn svg, #iconMute svg {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 
 }
