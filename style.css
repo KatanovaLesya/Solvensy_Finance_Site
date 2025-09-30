@@ -437,7 +437,7 @@ li {
 #services-tasks .service-item.visible:nth-child(2) {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0s;
+    transition-delay: 0.7s;
 }
 
 #services-tasks .service-item.visible:nth-child(1), 
