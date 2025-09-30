@@ -1432,8 +1432,40 @@ blockquote {
     .hero p {
         font-size: 1rem;
     }
-    p, .implementation-text, .supervisor-text {
+    .implementation-text, .supervisor-text {
         font-size: 0.9rem;
     }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+        .header-container {
+            gap: 0.3rem;
+            padding: 0.3rem;
+            flex-direction: column;
+        }
+    
+        header.shrink .header-container {
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+        }
+    
+        nav {
+            gap: 0.4rem;
+        }
+    
+        nav a {
+            font-size: 0.7rem;
+        }
+    
+        .phone {
+            display: flex;
+            justify-content: flex-end;
+        }
+    
+        .phone a {
+            font-size: 0.7rem;
+        }
 
 }
