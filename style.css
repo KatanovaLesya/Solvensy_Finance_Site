@@ -1440,16 +1440,16 @@ blockquote {
         font-size: 0.9rem;
     }
     
-        nav {
-            gap: 0.4rem;
+    nav a {
+        font-size: 0.7rem;
         }
     
-        nav a {
-            font-size: 0.7rem;
-        }
-    
-        .phone a {
-            font-size: 0.7rem;
-        }
+    .phone a {
+        font-size: 0.7rem;
+    }
+    #unmuteBtn svg, #iconMute svg {
+        width: 20px;
+        height: 20px;
+    }
 
 }
