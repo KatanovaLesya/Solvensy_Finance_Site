@@ -219,25 +219,35 @@ window.addEventListener("scroll", function() {
   }
 });
 
+// ===== Scroll to Top Button =====
+
 // Отримуємо кнопку
-const scrollTopBtn = document.getElementById("scrollTopBtn");
+const scrollBtn = document.getElementById("scrollTopBtn");
 
-// Показуємо/ховаємо при скролі
-window.onscroll = function () {
+// Функція показу/схову кнопки
+function toggleScrollBtn() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollTopBtn.style.display = "block";
+    scrollBtn.style.display = "block";
   } else {
-    scrollTopBtn.style.display = "none";
+    scrollBtn.style.display = "none";
   }
-};
+}
 
-// При кліку — плавний скрол угору
-scrollTopBtn.addEventListener("click", () => {
+// Виклик при прокручуванні
+window.addEventListener("scroll", toggleScrollBtn);
+
+// Виклик одразу після завантаження сторінки
+document.addEventListener("DOMContentLoaded", toggleScrollBtn);
+
+// Прокрутка до верху при кліку
+scrollBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
 });
+
+
 
 // ===== YouTube Video Control =====
 

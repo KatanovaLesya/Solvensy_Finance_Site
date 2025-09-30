@@ -923,28 +923,28 @@ blockquote {
     stroke: none;
 }
 
-#scrollTopBtn {
+#scrollTopBtn{
     display: none;
-    /* спочатку прихована */
     position: fixed;
-    bottom: 30px;
-    /* відступ віднизу */
-    right: 30px;
-    /* відступ справа */
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
     z-index: 1000;
-    font-size: 1rem;
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 0.7rem 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
+    display: flex;
+    background: none;
+    border: none;
+    padding: 0;
+
+
+}
+#scrollTopBtn svg{
+    fill: #ff6600;
 }
 
-#scrollTopBtn:hover {
-    background-color: #e65500;
+#scrollTopBtn svg:hover {
+    fill: #e65500;
 }
 
 /* Адаптив */
@@ -1376,7 +1376,7 @@ blockquote {
 }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 812px){
     .logo {
         height: 60px;
     }
