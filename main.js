@@ -210,14 +210,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-window.addEventListener("scroll", function() {
+document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
-  if (window.scrollY > 50) {
-    header.classList.add("shrink");
-  } else {
-    header.classList.remove("shrink");
+  const videoSection = document.querySelector(".video-section");
+
+  // логіка для shrink
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
+
+  // логіка для прозорості
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          header.classList.add("transparent");
+        } else {
+          header.classList.remove("transparent");
+        }
+      });
+    },
+    { threshold: 0.3 } // 30% секції видно
+  );
+
+  if (videoSection) {
+    observer.observe(videoSection);
   }
 });
+
 
 // ===== Scroll to Top Button =====
 
@@ -247,69 +271,102 @@ scrollBtn.addEventListener("click", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("myVideo");
+  const overlay = document.getElementById("videoOverlay");
 
-
-// ===== YouTube Video Control =====
-
-// 1. Підключаємо YouTube IFrame API
-const tag = document.createElement("script");
-tag.src = "https://www.youtube.com/iframe_api";
-document.head.appendChild(tag);
-
-let player;
-
-// 2. Ініціалізація плеєра після завантаження API
-function onYouTubeIframeAPIReady() {
-  console.log("✅ YouTube API Ready");
-
-  player = new YT.Player("myVideo", {
-    events: {
-      onReady: () => {
-        console.log("▶️ Player Ready");
-        setupObserver();
-      },
-      onStateChange: onPlayerStateChange
-    }
-  });
-}
-
-// 3. IntersectionObserver → запуск і пауза відео при скролі
-function setupObserver() {
-  const videoSection = document.querySelector(".video-section");
-  console.log("👀 Observer attached to:", videoSection);
-
+  // Запуск при скролі (без звуку)
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("🎬 Section visible → play");
-          player.playVideo();
+          video.play();
         } else {
-          console.log("⏸️ Section hidden → pause");
-          player.pauseVideo();
+          video.pause();
         }
       });
     },
-    { threshold: 0.5 } // хоча б 50% секції має бути видно
+    { threshold: 0.5 } // запускає коли видно хоча б 50% відео
   );
 
-  observer.observe(videoSection);
-}
+  observer.observe(video);
 
-// 4. Показ оверлею після завершення відео
-function onPlayerStateChange(event) {
-  const overlay = document.getElementById("videoOverlay");
-
-  if (event.data === YT.PlayerState.ENDED) {
-    console.log("🏁 Video ended → show overlay");
+  // Показати оверлей після закінчення
+  video.addEventListener("ended", () => {
     overlay.style.display = "flex";
-  }
-}
+  });
 
-// 5. Клік по оверлею → перезапуск відео
-document.getElementById("videoOverlay").addEventListener("click", () => {
-  console.log("🔁 Overlay clicked → restart video");
-  player.seekTo(0);
-  player.playVideo();
-  document.getElementById("videoOverlay").style.display = "none";
+  // Клік "Переглянути ще раз"
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    video.currentTime = 0;
+    video.play();
+  });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("myVideo");
+  const overlay = document.getElementById("videoOverlay");
+  const unmuteBtn = document.getElementById("unmuteBtn");
+  const iconMute = document.getElementById("iconMute");
+  const iconUnmute = document.getElementById("iconUnmute");
+
+  // Автозапуск при скролі (без звуку)
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  observer.observe(video);
+
+  // Оверлей після завершення
+  video.addEventListener("ended", () => {
+    overlay.style.display = "flex";
+  });
+
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    video.currentTime = 0;
+    video.play();
+  });
+
+  // Кнопка mute/unmute
+  unmuteBtn.addEventListener("click", () => {
+    if (video.muted) {
+      video.muted = false;
+      iconMute.style.display = "none";
+      iconUnmute.style.display = "block";
+    } else {
+      video.muted = true;
+      iconMute.style.display = "block";
+      iconUnmute.style.display = "none";
+    }
+  });
+});
+
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+const videoSection = document.querySelector(".video-section");
+
+window.addEventListener("scroll", () => {
+    const videoBottom = videoSection.offsetTop + videoSection.offsetHeight;
+    if (window.scrollY > videoBottom) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+});
+
+// клік по кнопці — плавний скрол на верх
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });

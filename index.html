@@ -62,11 +62,48 @@
     <!-- Video Section -->
     <section class="video-section">
         <div class="video-container">
-            <!-- Відео з YouTube -->
+            <!-- Відео з YouTube 
             <iframe id="myVideo" src="https://www.youtube.com/embed/qvwrDvJr0I8?vq=hd1080&rel=0&autoplay=0&controls=1&modestbranding=1&mute=1&playsinline=1&enablejsapi=1&cc_load_policy=1&cc_lang_pref=uk&color=white" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
             </iframe>
+            -->
+            <!-- Відео локальне (закоментовано, для майбутнього використання) -->
+            <video id="myVideo" playsinline muted>
+                <source src="./video/hero2025.mp4" type="video/mp4">
+                    Ваш браузер не підтримує відео.
+            </video>
+            <!-- Кнопка звуку -->
+            <button id="unmuteBtn" class="unmute-btn">
+                <svg id="iconUnmute" enable-background="new 0 0 24 24" height="50" viewBox="0 0 24 24" width="50"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path
+                            d="m19.1 4.9c-.4-.3-.9-.3-1.3 0-.4.4-.5 1-.1 1.4 3.1 3.1 3.1 8.2 0 11.3-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3c3.9-3.8 3.9-10.2 0-14.1z">
+                        </path>
+                        <path
+                            d="m16.2 7.8c-.4-.3-.9-.3-1.3 0-.4.4-.5 1-.1 1.4 1.6 1.6 1.6 4.1 0 5.7-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3c2.4-2.4 2.4-6.2 0-8.5z">
+                        </path>
+                        <path
+                            d="m11.4 4.1c-.4-.2-.8-.1-1.1.2l-3.7 3.7h-2.6c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h2.6l3.7 3.7c.2.2.4.3.7.3.1 0 .3 0 .4-.1.4-.2.6-.5.6-.9v-14c0-.4-.2-.8-.6-.9z">
+                        </path>
+                    </g>
+                </svg>
+                <!-- Значок unmute (спочатку прихований) -->
+                <svg height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg" id="iconMute">
+                    <g id="no_sound">
+                        <g>
+                            <g>
+                                <path
+                                    d="m21.707 20.293-18-18c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414l4.027 4.027c-.199.339-.32.77-.32 1.266v6c0 1.103.897 2 2 2h3.586l4.707 4.707c.191.191.447.293.707.293.129 0 .259-.024.383-.076.374-.154.617-.52.617-.924v-1.586l2.293 2.293c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414z">
+                                </path>
+                            </g>
+                            <path d="m18 3v11l-7-7h.59l4.7-4.71c.29-.28.72-.37 1.09-.21.38.15.62.52.62.92z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+
             <div id="videoOverlay" class="video-overlay">
                 <img src="https://img.youtube.com/vi/qvwrDvJr0I8/maxresdefault.jpg" alt="Video preview" class="video-preview">
                 <div class="overlay-text">
@@ -91,12 +128,7 @@
                 </div>
             </div>
 
-            <!-- Відео локальне (закоментовано, для майбутнього використання) 
-            <video controls>
-                <source src="./video/IMG_1106.MOV" type="video/mp4">
-                Ваш браузер не підтримує відео.
-            </video>
-        -->
+            
         </div>
         <div class="video-caption">
             <div class="arrow-item">
