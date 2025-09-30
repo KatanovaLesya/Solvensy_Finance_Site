@@ -990,10 +990,13 @@ blockquote {
     .cases,
     .support-container,
     .findirector,
-    .footer-container,
     .indicators-container {
         max-width: 90%;
     }
+    .footer-container{
+        max-width: 80%;
+    }
+
         header .header-container{
         width: 100%;
         max-width: 90%;
@@ -1451,5 +1454,28 @@ blockquote {
         width: 30px;
         height: 30px;
     }
+
+}
+
+@media (max-width: 875px) {
+    nav a {
+        font-size: 0.7rem;
+        }
+    
+    .phone a {
+        font-size: 0.7rem;
+    
+    }
+
+    .implementation-text, .supervisor-text {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+    .footer-container {
+        max-width: 80%;
+}       
 
 }
