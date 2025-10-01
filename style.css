@@ -1112,6 +1112,9 @@ blockquote {
         padding-bottom: 6rem;
         flex-wrap: wrap;
     }
+    .footer-container {
+        max-width: 90%;
+    }
 
 }
 
