@@ -312,6 +312,10 @@ li {
     transition: fill 0.3s ease, transform 0.3s ease;
 }
 
+.who-item p{
+    text-align: center;
+}
+
 #iconUnmute {
     display: none;
 }
